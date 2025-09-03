@@ -1,0 +1,5 @@
+{
+  "name": "React PWA Effects Showcase",
+  "description": "A progressive web application built with React and Tailwind CSS to demonstrate various visual effects in a slidable presentation format.",
+  "requestFramePermissions": []
+}
