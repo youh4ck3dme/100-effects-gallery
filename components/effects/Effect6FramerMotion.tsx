@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EffectContainer from './EffectContainer';
+import LoadingSpinner from '../LoadingSpinner';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -71,7 +72,7 @@ const Effect6FramerMotion: React.FC = () => {
 
   return (
     <EffectContainer className="bg-gradient-to-br from-purple-600 to-blue-500">
-      {isLibReady ? <MotionCard /> : <div>Loading Animation...</div>}
+      {isLibReady ? <MotionCard /> : <LoadingSpinner />}
     </EffectContainer>
   );
 };

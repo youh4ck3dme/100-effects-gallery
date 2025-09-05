@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EffectContainer from './EffectContainer';
+import LoadingSpinner from '../LoadingSpinner';
 
 const calc = (x: number, y: number) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
 const trans = (x: number, y: number, s: number) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
@@ -47,7 +48,7 @@ const Effect7ReactSpring: React.FC = () => {
 
   return (
     <EffectContainer className="bg-gradient-to-br from-green-400 to-cyan-500">
-      {isLibReady ? <SpringCard /> : <div>Loading Animation...</div>}
+      {isLibReady ? <SpringCard /> : <LoadingSpinner />}
     </EffectContainer>
   );
 };
